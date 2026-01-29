@@ -1,14 +1,29 @@
 -- =====================================================
 -- BASE DE DONNÉES : TIFOSI
--- Script de création du schéma
+-- Script d'initialisation de la base de données et création du schéma
 -- Auteur : IdhZY
 -- =====================================================
+
+-- INITIALISATION DE LA BASE DE DONNÉES ================
+
 
 -- Suppression si existante
 DROP DATABASE IF EXISTS tifosi;
 
--- Création de la base de données
-CREATE DATABASE tifosi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- Création de la base de données avec encodage UTF-8
+CREATE DATABASE tifosi DEFAULT CHARACTER SET utf8mb4;
+
+-- Sélection de la base de données
+USE tifosi;
+
+-- Création de l'utilisateur
+CREATE USER 'tifosi'@'localhost' IDENTIFIED BY 'xoXjog-qyztud-2qimqa';
+
+-- Attribution des privilèges d'administration
+GRANT ALL PRIVILEGES ON tifosi.* TO 'tifosi'@'localhost';
+
+
+-- CRÉATION DES TABLES =================================
 
 -- Sélection de la base de données
 USE tifosi;
