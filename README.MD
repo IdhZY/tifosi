@@ -14,5 +14,5 @@ Base de données MySQL pour le restaurant de Street-Food italien "Le Tifosi"
 
 ```sql
 SOURCE schema.sql;
-SOURCE insert.sql;
+SOURCE insert-data.sql;
 SOURCE requetes.sql;
