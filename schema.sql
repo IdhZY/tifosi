@@ -4,6 +4,13 @@
 -- Auteur : IdhZY
 -- =====================================================
 
+
+-- Suppression si existante
+DROP DATABASE IF EXISTS tifosi;
+
+-- Création de la base de données
+CREATE DATABASE tifosi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 -- Sélection de la base de données
 USE tifosi;
 
@@ -20,7 +27,7 @@ CREATE TABLE client (
     id_client INT PRIMARY KEY AUTO_INCREMENT,
     nom_client VARCHAR(50) NOT NULL,
     email_client VARCHAR(150) NOT NULL UNIQUE,
-    code_postal INT NOT NULL CHECK (code_postal BETWEEN 01000 AND 99999)
+    code_postal INT NOT NULL CHECK (code_postal BETWEEN 1000 AND 99999)
 );
 
 -- Création de la table "marque"
