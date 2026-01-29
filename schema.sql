@@ -4,7 +4,6 @@
 -- Auteur : IdhZY
 -- =====================================================
 
-
 -- Suppression si existante
 DROP DATABASE IF EXISTS tifosi;
 
